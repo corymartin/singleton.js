@@ -1,0 +1,2 @@
+var singleton  = require('../index');
+
