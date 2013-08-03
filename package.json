@@ -1,0 +1,24 @@
+{
+  "name": "singleton.js"
+, "version": "0.0.1"
+, "description": "Creates a singleton from a function constructor."
+, "readmeFilename": "README.md"
+, "license": "MIT"
+, "author": "Cory Martin"
+, "keywords": ["singleton", "design patterns"]
+, "main": "index.js"
+, "repository": {
+    "type": "git",
+    "url": "git@github.com:corymartin/delegate.js.git"
+  }
+, "devDependencies": {
+    "mocha": "1.x.x"
+  , "uglify-js": "2.3.x"
+  }
+, "engines": {
+    "node": ">= 0.10.x"
+  }
+, "scripts": {
+    "test": "mocha"
+  }
+}
