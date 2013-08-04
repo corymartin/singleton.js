@@ -1,8 +1,8 @@
 /*!
  * @preserve
- * {{NAME}}
- * {{DESCRIPTION}}
- * {{HOMEPAGE}}
+ * Singleton.js
+ * Creates a singleton from a function constructor.
+ * https://github.com/corymartin/singleton.js
  * Copyright (c) 2013 Cory Martin
  * Distributed under the MIT License
  */
@@ -44,7 +44,7 @@ void function() {
   };
 
 
-  singleton.VERSION = '{{VERSION}}';
+  singleton.VERSION = '0.0.1';
 
 
   /**

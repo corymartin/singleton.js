@@ -1,7 +1,8 @@
 {
-  "name": "singleton.js"
+  "name": "Singleton.js"
 , "version": "0.0.1"
 , "description": "Creates a singleton from a function constructor."
+, "homepage": "https://github.com/corymartin/singleton.js"
 , "readmeFilename": "README.md"
 , "license": "MIT"
 , "author": "Cory Martin"
@@ -9,7 +10,7 @@
 , "main": "index.js"
 , "repository": {
     "type": "git",
-    "url": "git@github.com:corymartin/delegate.js.git"
+    "url": "git@github.com:corymartin/singleton.js.git"
   }
 , "devDependencies": {
     "mocha": "1.x.x"

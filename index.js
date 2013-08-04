@@ -1,1 +1,5 @@
-module.exports = require('./lib/singleton');
+var singleton = require('./lib/singleton');
+singleton.VERSION = require('./package.json').version;
+
+module.exports = singleton;
+
