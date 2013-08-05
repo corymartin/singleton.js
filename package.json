@@ -15,6 +15,7 @@
 , "devDependencies": {
     "mocha": "1.x.x"
   , "uglify-js": "2.3.x"
+  , "chai": "1.7.x"
   }
 , "engines": {
     "node": ">= 0.10.x"
