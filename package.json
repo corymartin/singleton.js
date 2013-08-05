@@ -1,6 +1,6 @@
 {
   "name": "singleton.js"
-, "version": "0.1.0"
+, "version": "0.2.0"
 , "description": "Creates a singleton from a function constructor."
 , "homepage": "https://github.com/corymartin/singleton.js"
 , "readmeFilename": "README.md"

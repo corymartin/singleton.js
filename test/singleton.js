@@ -40,6 +40,11 @@ describe('singleton()', function() {
     expect(new S2).to.equal(new S2);
   });
 
+  it('should work without a passed function constructor', function() {
+    var S = singleton();
+    expect(new S).to.equal(new S);
+  });
+
   it('should work with unnamed function constructors', function() {
     var S = singleton(function(name) {
       this.name = name;
