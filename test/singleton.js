@@ -75,7 +75,9 @@ describe('Returned singleton function constructor', function() {
     expect(new S).to.be.an.instanceOf(S);
     expect(new S).to.be.an.instanceOf(Modal);
     expect(new S().__proto__.__proto__).to.equal(Modal.prototype);
+  });
 
+  it('should keep all functionality of the passed class', function() {
     var coll = new Collection();
     expect(coll).to.equal(new Collection());
     coll.add([
@@ -98,8 +100,10 @@ describe('Returned singleton function constructor', function() {
     var Coll = Collection.extend({
       model: Mod
     });
+    expect(Coll.extend).to.equal(Backbone.Collection.extend);
     expect(new Coll()).to.be.instanceOf(Backbone.Collection);
     expect(new Coll()).to.equal(new Coll());
+    expect(Coll()).to.equal(new Coll());
   });
 });
 
