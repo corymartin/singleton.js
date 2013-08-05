@@ -11,6 +11,10 @@ Installation
 $ npm install singleton.js
 ```
 
+```js
+var singleton = require('singleton.js');
+```
+
 
 API
 ---
