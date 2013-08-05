@@ -16,6 +16,6 @@ compile:
 		| sed 's|{{HOMEPAGE}}|$(HOMEPAGE)|g' \
 		> dist/singleton.js
 	@@./node_modules/uglify-js/bin/uglifyjs \
-		--comments --output \
+		--mangle --comments --output \
 		dist/singleton.min.js dist/singleton.js
 

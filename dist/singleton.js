@@ -1,6 +1,6 @@
 /*!
  * @preserve
- * Singleton.js
+ * singleton.js
  * Creates a singleton from a function constructor.
  * https://github.com/corymartin/singleton.js
  * Copyright (c) 2013 Cory Martin
@@ -14,6 +14,7 @@ void function() {
 
   var hasOwn = Object.prototype.hasOwnProperty;
 
+  var noop = function(){};
 
   /**
    * @param {Function} Ctor function constructor
@@ -22,11 +23,13 @@ void function() {
   var singleton = function(Ctor) {
     var self;
 
+    Ctor = Ctor || noop;
+
     function Singleton() {
       if (self) return self;
       self = this instanceof Ctor
         ? this
-        : Object.create(Ctor.prototype);
+        : Object.create(Singleton.prototype);
       Ctor.apply(self, arguments);
       return self;
     }
@@ -44,7 +47,7 @@ void function() {
   };
 
 
-  singleton.VERSION = '0.0.1';
+  singleton.VERSION = '0.2.0';
 
 
   /**
