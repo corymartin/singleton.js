@@ -15,6 +15,12 @@ $ npm install singleton.js
 var singleton = require('singleton.js');
 ```
 
+Browser
+-------
+
+[singleton.js](https://rawgithub.com/corymartin/singleton.js/master/dist/singleton.js)
+
+[singleton.min.js](https://rawgithub.com/corymartin/singleton.js/master/dist/singleton.min.js)
 
 API
 ---
