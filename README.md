@@ -46,17 +46,21 @@ __returns__
 ```js
 var Modal = singleton();
 Modal.prototype = {
-  open: function() { /****/ },
+  open:  function() { /****/ },
   close: function() { /****/ }
 };
-new Modal() === new Modal() // => true
+new Modal() === new Modal()  // => true
+new Modal() instanceof Modal // => true
 ```
 
 ```js
 function Modal(priority){
   this.priority = priority;
 }
+Modal.prototype.open  = function() { /****/ };
+Modal.prototype.close = function() { /****/ };
 
+// Create a singleton from an existing function constructor
 var Alert = singleton(Modal);
 new Alert(10);
 new Alert() === new Alert()  // => true
@@ -69,16 +73,16 @@ new Alert(3).priority        // => 10
 ```
 
 ```js
-var Printer = singleton(function(id, config) {
-  this.id = id;
+// Define singleton's constructor
+var Printer = singleton(function(name) {
+  this.name  = name;
+  this.queue = [];
 });
-Printer.prototype = {
-  print: function() { /****/ },
-  queue: []
-};
+Printer.prototype.print = function() { /****/ };
+
 new Printer('Office Printer');
-new Printer().id        // => 'Office Printer'
-new Printer('Chuck').id // => 'Office Printer'
+new Printer().name        // => 'Office Printer'
+new Printer('Chuck').name // => 'Office Printer'
 ```
 
 Example with Backbone.js Collections
@@ -90,6 +94,10 @@ var Movies = singleton(Backbone.Collection.extend({
   model: Movie
 }));
 
+// Alternatively
+// var Movies = singleton(Backbone.Collection);
+// Movies.prototype.model = Movie;
+
 new Movies() === new Movies() // => true
 
 new Movies().add([
@@ -99,7 +107,9 @@ new Movies().add([
 
 new Movies().length // => 2
 
+// Static/Own properties are maintained
 var BMovies = Movies.extend();
-BMovies instanceof Movies              // => true
-BMovies instanceof Backbone.Collection // => true
+new BMovies() instanceof Movies              // => true
+new BMovies() instanceof Backbone.Collection // => true
 ```
+
