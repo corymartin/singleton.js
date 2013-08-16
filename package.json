@@ -1,7 +1,7 @@
 {
   "name": "singleton.js"
 , "version": "0.2.0"
-, "description": "Creates a singleton from a function constructor."
+, "description": "JavaScript Singletons made easy."
 , "homepage": "https://github.com/corymartin/singleton.js"
 , "readmeFilename": "README.md"
 , "license": "MIT"

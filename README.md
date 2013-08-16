@@ -1,7 +1,7 @@
 Singleton.js
 ============
 
-Creates a singleton from a function constructor.
+JavaScript Singletons made easy.
 
 
 Installation
