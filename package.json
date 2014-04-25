@@ -1,26 +1,30 @@
 {
-  "name": "singleton.js"
-, "version": "0.2.0"
-, "description": "JavaScript Singletons made easy."
-, "homepage": "https://github.com/corymartin/singleton.js"
-, "readmeFilename": "README.md"
-, "license": "MIT"
-, "author": "Cory Martin"
-, "keywords": ["singleton", "design patterns"]
-, "main": "index.js"
-, "repository": {
+  "name": "singleton.js",
+  "version": "0.3.0",
+  "description": "JavaScript Singletons made easy.",
+  "homepage": "https://github.com/corymartin/singleton.js",
+  "readmeFilename": "README.md",
+  "license": "MIT",
+  "author": "Cory Martin",
+  "keywords": [
+    "singleton",
+    "design patterns"
+  ],
+  "main": "index.js",
+  "repository": {
     "type": "git",
     "url": "git@github.com:corymartin/singleton.js.git"
-  }
-, "devDependencies": {
-    "mocha": "1.x.x"
-  , "uglify-js": "2.3.x"
-  , "chai": "1.7.x"
-  }
-, "engines": {
+  },
+  "devDependencies": {
+    "mocha": "1.x.x",
+    "uglify-js": "2.4.x",
+    "chai": "1.9.x",
+    "backbone": "~1.x.x"
+  },
+  "engines": {
     "node": ">= 0.10.x"
-  }
-, "scripts": {
+  },
+  "scripts": {
     "test": "mocha"
   }
 }

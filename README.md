@@ -18,9 +18,7 @@ var singleton = require('singleton.js');
 Browser
 -------
 
-Requires `Object.create()`. If targeting older, unsupported
-browsers (<= IE8) you'll need a
-[polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/create#Polyfill).
+ES5 browser (>= IE9) required.
 
 [singleton.js](https://rawgithub.com/corymartin/singleton.js/master/dist/singleton.js)
 
