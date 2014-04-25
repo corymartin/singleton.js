@@ -1,24 +1,30 @@
 /*!
  * @preserve
  * singleton.js
- * Creates a singleton from a function constructor.
+ * JavaScript Singletons made easy.
  * https://github.com/corymartin/singleton.js
  * Copyright (c) 2013 Cory Martin
  * Distributed under the MIT License
  */
-void function() {
-  'use strict';
+void function() { 'use strict'
 
   var root = this;
   var previousSingleton = root.singleton;
 
-  var hasOwn = Object.prototype.hasOwnProperty;
-
   var noop = function(){};
 
+  function merge(target, source) {
+    Object.getOwnPropertyNames(source).forEach(function(prop) {
+      if (prop in target) return;
+      var desc = Object.getOwnPropertyDescriptor(source, prop);
+      Object.defineProperty(target, prop, desc);
+    });
+  }
+
   /**
-   * @param {Function} Ctor function constructor
-   * @returns {Object}
+   * @param {Function} Ctor function constructor. Optional.
+   * @returns {Function}
+   * @api public
    */
   var singleton = function(Ctor) {
     var self;
@@ -36,18 +42,14 @@ void function() {
 
     Singleton.prototype = Object.create(Ctor.prototype);
 
-    // Copy own properties
-    for (var prop in Ctor) {
-      if (hasOwn.call(Ctor, prop)) {
-        Singleton[prop] = Ctor[prop];
-      }
-    }
+    // Copy static properties
+    merge(Singleton, Ctor);
 
     return Singleton;
   };
 
 
-  singleton.VERSION = '0.2.0';
+  singleton.VERSION = '0.3.0';
 
 
   /**
@@ -58,7 +60,6 @@ void function() {
     root.singleton = previousSingleton;
     return singleton;
   };
-
 
 
   /*
