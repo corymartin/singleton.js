@@ -1,6 +1,6 @@
 {
   "name": "singleton.js",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "JavaScript Singletons made easy.",
   "homepage": "https://github.com/corymartin/singleton.js",
   "readmeFilename": "README.md",
